@@ -1,0 +1,451 @@
+<!DOCTYPE html><html lang="C"><head><title>beyond-java-8</title><meta property="og:title" content="beyond-java-8"><meta property="og:image:alt" content="beyond-java-8"><meta name="description" content="This is an example slide deck created with md-slides-template"><meta property="og:description" content="This is an example slide deck created with md-slides-template"><link rel="canonical" href="https://xpepper.github.io/beyondjava8-alternative/"><meta property="og:url" content="https://xpepper.github.io/beyondjava8-alternative/"><meta property="og:image" content="https://xpepper.github.io/beyondjava8-alternative/80e8dd67f3646861bbbcea0628f6d17dc7c7fdd0.png"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><style>.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTBMMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMzIgOTBsNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDBsMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwbDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS13aWR0aDo1cHh9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImEiIGQ9Ik0yMCA2MGgtNWE1IDUgMCAwMS01LTVWMjBhNSA1IDAgMDE1LTVoNjBhNSA1IDAgMDE1IDV2NU0zMCA4NWg2MCIvPjxyZWN0IHg9IjMwIiB5PSIzNSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiByeD0iNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIi8+PHJlY3QgY2xhc3M9ImEiIHg9IjMwIiB5PSIzNSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiByeD0iNSIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNNDAgNTBoNDBNNDAgNjBoMzAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;z-index:1;will-change:transform}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{flex:0 0 0;background:#0288d1;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{height:100%;left:0;position:absolute;top:0;width:100%;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:minmax(140px,1fr) 2fr 3em;grid-template-areas:"current next" "current note" "info    note"}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;position:relative;overflow:hidden}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;position:absolute;pointer-events:none;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{-webkit-filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;-webkit-filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;position:absolute;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;top:20px;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#ddd;grid-area:note}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{margin:20px;width:calc(100% - 40px);height:calc(100% - 40px);box-sizing:border-box;overflow:auto;padding-right:3px;white-space:pre-wrap;word-wrap:break-word;scrollbar-width:thin;scrollbar-color:hsla(0,0%,86.7%,.5) transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,86.7%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#ddd;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{display:block;box-sizing:border-box;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}div#p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;color-adjust:exact!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}div#p>svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap}div#p>svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp / Marpit Uncover theme
+ *
+ * @theme uncover
+ * @author Yuki Hattori
+ *
+ * @auto-scaling fittingHeader,math
+ * @size 4:3 960px 720px
+ */div#p>svg>foreignObject>section{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;flex-wrap:nowrap;font-size:40px;height:720px;-webkit-box-pack:center;justify-content:center;letter-spacing:3px;line-height:1.4;padding:30px 70px;position:relative;text-align:center;width:1280px;word-wrap:break-word;z-index:0;background:#fdfcff;color:#202228}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section:after{display:-webkit-box;display:flex}div#p>svg>foreignObject>section:after{-webkit-box-align:end;align-items:flex-end;font-size:.6em;height:80px;-webkit-box-pack:end;justify-content:flex-end;padding:30px;text-align:right;width:80px;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1 1" width="1" height="1"><path d="M0 1h1v-1Z" fill="rgba(32, 34, 40, 0.05)"/></svg>') no-repeat 50%;background-size:cover;color:#202228;text-shadow:0 0 5px #fdfcff}div#p>svg>foreignObject>section code,div#p>svg>foreignObject>section pre{background:#f2f1f4;color:#202228}div#p>svg>foreignObject>section a{color:#009dd5}div#p>svg>foreignObject>section a:hover{color:#087eaa}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{color:#33b1dd}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{color:rgba(32,34,40,.4);text-shadow:0 1px 0 rgba(253,252,255,.8)}div#p>svg>foreignObject>section mark{color:#009dd5;background:transparent}div#p>svg>foreignObject>section:not(.invert) .hljs{display:block;overflow-x:auto;padding:.5em;background:#fff}div#p>svg>foreignObject>section:not(.invert) .hljs,div#p>svg>foreignObject>section:not(.invert) .hljs-subst{color:#000}div#p>svg>foreignObject>section:not(.invert) .hljs-addition,div#p>svg>foreignObject>section:not(.invert) .hljs-meta,div#p>svg>foreignObject>section:not(.invert) .hljs-string,div#p>svg>foreignObject>section:not(.invert) .hljs-symbol,div#p>svg>foreignObject>section:not(.invert) .hljs-template-tag,div#p>svg>foreignObject>section:not(.invert) .hljs-template-variable{color:#756bb1}div#p>svg>foreignObject>section:not(.invert) .hljs-comment,div#p>svg>foreignObject>section:not(.invert) .hljs-quote{color:#636363}div#p>svg>foreignObject>section:not(.invert) .hljs-bullet,div#p>svg>foreignObject>section:not(.invert) .hljs-link,div#p>svg>foreignObject>section:not(.invert) .hljs-literal,div#p>svg>foreignObject>section:not(.invert) .hljs-number,div#p>svg>foreignObject>section:not(.invert) .hljs-regexp{color:#31a354}div#p>svg>foreignObject>section:not(.invert) .hljs-deletion,div#p>svg>foreignObject>section:not(.invert) .hljs-variable{color:#88f}div#p>svg>foreignObject>section:not(.invert) .hljs-built_in,div#p>svg>foreignObject>section:not(.invert) .hljs-doctag,div#p>svg>foreignObject>section:not(.invert) .hljs-keyword,div#p>svg>foreignObject>section:not(.invert) .hljs-name,div#p>svg>foreignObject>section:not(.invert) .hljs-section,div#p>svg>foreignObject>section:not(.invert) .hljs-selector-class,div#p>svg>foreignObject>section:not(.invert) .hljs-selector-id,div#p>svg>foreignObject>section:not(.invert) .hljs-selector-tag,div#p>svg>foreignObject>section:not(.invert) .hljs-strong,div#p>svg>foreignObject>section:not(.invert) .hljs-tag,div#p>svg>foreignObject>section:not(.invert) .hljs-title,div#p>svg>foreignObject>section:not(.invert) .hljs-type{color:#3182bd}div#p>svg>foreignObject>section:not(.invert) .hljs-emphasis{font-style:italic}div#p>svg>foreignObject>section:not(.invert) .hljs-attribute{color:#e6550d}div#p>svg>foreignObject>section.invert{background:#202228;color:#fff}div#p>svg>foreignObject>section.invert:after{background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1 1" width="1" height="1"><path d="M0 1h1v-1Z" fill="rgba(255, 255, 255, 0.05)"/></svg>') no-repeat 50%;background-size:cover;color:#fff;text-shadow:0 0 5px #202228}div#p>svg>foreignObject>section.invert code,div#p>svg>foreignObject>section.invert pre{background:#2b2d33;color:#fff}div#p>svg>foreignObject>section.invert a{color:#60d0f0}div#p>svg>foreignObject>section.invert a:hover{color:#88dcf4}div#p>svg>foreignObject>section.invert h1 strong,div#p>svg>foreignObject>section.invert h2 strong,div#p>svg>foreignObject>section.invert h3 strong,div#p>svg>foreignObject>section.invert h4 strong,div#p>svg>foreignObject>section.invert h5 strong,div#p>svg>foreignObject>section.invert h6 strong{color:#80d9f3}div#p>svg>foreignObject>section.invert footer,div#p>svg>foreignObject>section.invert header{color:hsla(0,0%,100%,.4);text-shadow:0 1px 0 rgba(32,34,40,.8)}div#p>svg>foreignObject>section.invert mark{color:#60d0f0;background:transparent}div#p>svg>foreignObject>section.invert .hljs{display:block;overflow-x:auto;padding:.5em;background:#222;color:#fff}div#p>svg>foreignObject>section.invert .hljs-comment,div#p>svg>foreignObject>section.invert .hljs-quote{color:#777}div#p>svg>foreignObject>section.invert .hljs-built_in,div#p>svg>foreignObject>section.invert .hljs-builtin-name,div#p>svg>foreignObject>section.invert .hljs-bullet,div#p>svg>foreignObject>section.invert .hljs-deletion,div#p>svg>foreignObject>section.invert .hljs-link,div#p>svg>foreignObject>section.invert .hljs-literal,div#p>svg>foreignObject>section.invert .hljs-meta,div#p>svg>foreignObject>section.invert .hljs-number,div#p>svg>foreignObject>section.invert .hljs-params,div#p>svg>foreignObject>section.invert .hljs-regexp,div#p>svg>foreignObject>section.invert .hljs-symbol,div#p>svg>foreignObject>section.invert .hljs-tag,div#p>svg>foreignObject>section.invert .hljs-template-variable,div#p>svg>foreignObject>section.invert .hljs-variable{color:#ab875d}div#p>svg>foreignObject>section.invert .hljs-attribute,div#p>svg>foreignObject>section.invert .hljs-name,div#p>svg>foreignObject>section.invert .hljs-section,div#p>svg>foreignObject>section.invert .hljs-selector-class,div#p>svg>foreignObject>section.invert .hljs-selector-id,div#p>svg>foreignObject>section.invert .hljs-title,div#p>svg>foreignObject>section.invert .hljs-type{color:#9b869b}div#p>svg>foreignObject>section.invert .hljs-addition,div#p>svg>foreignObject>section.invert .hljs-keyword,div#p>svg>foreignObject>section.invert .hljs-selector-tag,div#p>svg>foreignObject>section.invert .hljs-string{color:#8f9c6c}div#p>svg>foreignObject>section.invert .hljs-emphasis{font-style:italic}div#p>svg>foreignObject>section.invert .hljs-strong{font-weight:700}div#p>svg>foreignObject>section>:first-child,div#p>svg>foreignObject>section[data-header]>:nth-child(2){margin-top:0}div#p>svg>foreignObject>section>:last-child,div#p>svg>foreignObject>section[data-footer]>:nth-last-child(2){margin-bottom:0}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:660px;--preserve-aspect-ratio:xMidYMid meet}div#p>svg>foreignObject>section blockquote,div#p>svg>foreignObject>section p{margin:0 0 15px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{margin:15px 0 30px}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{font-weight:inherit}div#p>svg>foreignObject>section h1{font-size:2em}div#p>svg>foreignObject>section h2{font-size:1.7em}div#p>svg>foreignObject>section h3{font-size:1.4em;letter-spacing:2px}div#p>svg>foreignObject>section h4{font-size:1.2em;letter-spacing:2px}div#p>svg>foreignObject>section h5{font-size:1em;letter-spacing:1px}div#p>svg>foreignObject>section h6{font-size:.8em;letter-spacing:1px}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{position:absolute;z-index:1;left:70px;right:70px;font-size:.45em;letter-spacing:1px}div#p>svg>foreignObject>section header{top:30px}div#p>svg>foreignObject>section footer{bottom:30px}div#p>svg>foreignObject>section a{text-decoration:none}div#p>svg>foreignObject>section a:hover{text-decoration:underline}div#p>svg>foreignObject>section ol,div#p>svg>foreignObject>section ul{margin:0 auto;text-align:left}div#p>svg>foreignObject>section>ol,div#p>svg>foreignObject>section>ul{margin-bottom:15px}div#p>svg>foreignObject>section code,div#p>svg>foreignObject>section pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;letter-spacing:0;margin:-.2em .2em .2em;padding:.2em}div#p>svg>foreignObject>section pre{box-shadow:0 4px 8px rgba(0,0,0,.2);font-size:70%;line-height:1.15;margin:15px auto 30px;min-width:40%;padding:.4em .6em;text-align:left}div#p>svg>foreignObject>section pre>code{margin:0;padding:0}div#p>svg>foreignObject>section table{border-collapse:collapse;margin:0 auto 15px}div#p>svg>foreignObject>section table>tbody>tr>td,div#p>svg>foreignObject>section table>tbody>tr>th,div#p>svg>foreignObject>section table>thead>tr>td,div#p>svg>foreignObject>section table>thead>tr>th{padding:.15em .5em}div#p>svg>foreignObject>section table>thead>tr>td,div#p>svg>foreignObject>section table>thead>tr>th{border-bottom:3px solid}div#p>svg>foreignObject>section table>tbody>tr:not(:last-child)>td,div#p>svg>foreignObject>section table>tbody>tr:not(:last-child)>th{border-bottom:1px solid}div#p>svg>foreignObject>section blockquote{font-size:90%;line-height:1.3;padding:0 2em;position:relative;z-index:0}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before{content:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNNDQgMTkuM0wzOC45NCAwQzguMTQgOS41OSAwIDQwLjA1IDAgNTQuODNWMTAwaDQxLjQ3VjU0LjgzaC0yM2MtLjA0LS4yOC4yNS0yNy42NiAyNS41My0zNS41M3ptNTYgMEw5NC45NCAwQzY0LjE0IDkuNTkgNTYgNDAuMDUgNTYgNTQuODNWMTAwaDQxLjQ3VjU0LjgzaC0yM2MtLjA0LS4yOC4yNS0yNy42NiAyNS41My0zNS41M3oiIGZpbGw9IiM4ODgiIG9wYWNpdHk9Ii4zMyIvPjwvc3ZnPg==");height:auto;pointer-events:none;position:absolute;width:1em;z-index:-1}div#p>svg>foreignObject>section blockquote:before{left:0;top:0}div#p>svg>foreignObject>section blockquote:after{bottom:0;right:0;-webkit-transform:rotate(180deg);transform:rotate(180deg)}div#p>svg>foreignObject>section blockquote>:last-child{margin-bottom:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-theme="uncover" style="--theme:uncover;">
+<h1>Beyond</h1>
+<h1>Java 8</h1>
+<h3>What should you know?</h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-theme="uncover" style="--theme:uncover;">
+<table>
+<thead>
+<tr>
+<th>What is going to <strong>happen</strong>?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is going to <strong>change</strong>?</td>
+</tr>
+<tr>
+<td>Is Java still <strong>free</strong>?</td>
+</tr>
+<tr>
+<td>How <strong>hard</strong> is it to update to Java 11?</td>
+</tr>
+<tr>
+<td>What's new in the new <strong>JDK</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-marpit-fragments="4" data-theme="uncover" style="--theme:uncover;">
+<h3>Topics</h3>
+<ul>
+<li data-marpit-fragment="1"><strong>Six-months</strong> release cycle</li>
+<li data-marpit-fragment="2">New <strong>licensing</strong> and <strong>long-term support</strong> (LTS) models</li>
+<li data-marpit-fragment="3"><strong>OpenJDK</strong> is the new normal</li>
+<li data-marpit-fragment="4">From Java 8 onto a <strong>modular</strong> and flexible JDK</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
+<h3>Java's old release cadence</h3>
+<p>In the past, Java major releases where<br />
+<strong>long-running</strong> and <strong>irregular</strong></p>
+<ul>
+<li data-marpit-fragment="1">Java 7 took 5 years</li>
+<li data-marpit-fragment="2">Java 8 took 3 years</li>
+<li data-marpit-fragment="3">Java 9 took 3.5 years</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-marpit-fragments="6" data-theme="uncover" style="--theme:uncover;">
+<h3>Java's old release cadence</h3>
+<p>&quot;Fat&quot; releases had a <strong>massive impact</strong><br />
+on the way we write Java code</p>
+<ul>
+<li data-marpit-fragment="1"><strong>Java 5</strong>: Generics</li>
+<li data-marpit-fragment="2"><strong>Java 8</strong>:
+<ul>
+<li data-marpit-fragment="3">Functional constructs (<code>λ</code>)</li>
+<li data-marpit-fragment="4">Streams</li>
+<li data-marpit-fragment="5">Method Reference (<code>::</code>)</li>
+</ul>
+</li>
+<li data-marpit-fragment="6"><strong>Java 9</strong>: Java Module System (<em>Jigsaw</em>)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-theme="uncover" style="--theme:uncover;">
+<h3>New Release Cadence</h3>
+<p>A brand-new major Java SE version will be released <strong>every 6 months</strong> (in <em>September</em> and <em>March</em>)</p>
+<blockquote>
+<p>The rate of innovation doesn’t change.<br />
+The rate of innovation delivery increases.</p>
+<p>— Mark Reinhold</p>
+</blockquote>
+<p><strong>This started with Java 9, released in September 2017</strong></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-theme="uncover" style="--theme:uncover;">
+<table>
+<thead>
+<tr>
+<th>Then</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mar 18 Java 10</td>
+</tr>
+<tr>
+<td>Sep 18 Java 11 (LTS)</td>
+</tr>
+<tr>
+<td>Mar 19 Java 12</td>
+</tr>
+<tr>
+<td>Sep 19 Java 13</td>
+</tr>
+<tr>
+<td>Mar 20 Java 14</td>
+</tr>
+<tr>
+<td>Sep 20 Java 15</td>
+</tr>
+<tr>
+<td>Mar 21 Java 16</td>
+</tr>
+<tr>
+<td>Sep 21 Java 17 (LTS)</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
+<h3>What about Java 8?</h3>
+<ul>
+<li data-marpit-fragment="1"><strong>Released 03/2014</strong></li>
+<li data-marpit-fragment="2"><strong>is a LTS release</strong></li>
+<li data-marpit-fragment="3"><strong>free support ends 01/2019</strong></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
+<h3>Java 9</h3>
+<ul>
+<li data-marpit-fragment="1"><strong>Released 09/2017</strong></li>
+<li data-marpit-fragment="2"><strong>Already unmantained</strong>
+<ul>
+<li data-marpit-fragment="3">free support ended <em>03/2018</em></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
+<h3>Java 10</h3>
+<ul>
+<li data-marpit-fragment="1"><strong>Released 03/2018</strong></li>
+<li data-marpit-fragment="2"><strong>Already unmantained</strong>
+<ul>
+<li data-marpit-fragment="3">free support ended <em>09/2018</em></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
+<h3>Java 11</h3>
+<p>Current version of Java, which is a LTS:</p>
+<ul>
+<li data-marpit-fragment="1"><strong>free updates from 09/2018 to 03/2019</strong> (six months)</li>
+<li data-marpit-fragment="2"><strong>OracleJDK commercial support for 5+ years</strong></li>
+<li data-marpit-fragment="3"><strong>free updates from AdoptOpenJDK</strong></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-theme="uncover" style="--theme:uncover;">
+<h3>OpenJDK Is The New Default</h3>
+<p>Starting from JDK 11, <a href="https://openjdk.java.net/">OpenJDK</a> is the official JDK source code repository.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-fragments="5" data-theme="uncover" style="--theme:uncover;">
+<h3>OpenJDK Is The New Default</h3>
+<p>From the <strong>OpenJDK</strong> repo, each vendor build its binary distribution:</p>
+<ul>
+<li data-marpit-fragment="1">Oracle builds and mantains <a href="https://java.oracle.com/">OracleJDK</a></li>
+<li data-marpit-fragment="2">Oracle also - during the life of a JDK version, 6 months - builds and ships the binary of <a href="http://jdk.java.net/">OpenJDK</a></li>
+<li data-marpit-fragment="3"><a href="https://adoptopenjdk.net/">AdoptOpenJDK</a> - checks out source code and build their binary version of JDK</li>
+<li data-marpit-fragment="4"><strong>RedHat JDK</strong> ( + their stuff, e.g. <a href="https://wiki.openjdk.java.net/display/shenandoah/Main">Shenandoah GC</a>)</li>
+<li data-marpit-fragment="5"><strong>AzulJDK</strong> binary =&gt; <strong>Zulu</strong></li>
+</ul>
+<p>⇝ <strong>OpenJDK</strong> is the new normal!</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-fragments="5" data-theme="uncover" style="--theme:uncover;">
+<h3>LTS? Free? Commercial?</h3>
+<p>During the 6 months of life of Java 11</p>
+<ul>
+<li data-marpit-fragment="1"><strong>OpenJDK</strong> binary, <strong>AdoptOpenJDK</strong>, Azul <strong>Zulu</strong>
+<ul>
+<li data-marpit-fragment="2">all GPL license.</li>
+<li data-marpit-fragment="3">You can use them for free in production.</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>OracleJDK</strong>
+<ul>
+<li data-marpit-fragment="5">pay for use it in production <em>(from version 11 onwards)</em>.</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
+<h3>What happens in March 2019 when Java 11 ends its life?</h3>
+<p>You can choose:</p>
+<ul>
+<li data-marpit-fragment="1"><strong>upgrade to Java 12</strong></li>
+<li data-marpit-fragment="2"><strong>stay in Java 11</strong></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="4" data-theme="uncover" style="--theme:uncover;">
+<p>If you <strong>stay on Java 11</strong>, you could</p>
+<ul>
+<li data-marpit-fragment="1"><strong>Never update</strong>
+<ul>
+<li data-marpit-fragment="2">=&gt; exposed to security vulnerabilities, bugs, ...</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>Update to Java 11.0.something</strong>
+<ul>
+<li data-marpit-fragment="4">=&gt; BUT where do you take that patched version?</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
+<h3>Oracle will fix / patch only the current JDK version</h3>
+<ul>
+<li data-marpit-fragment="1">(actually OpenJDK 11)</li>
+<li data-marpit-fragment="2"><strong>No backporting</strong> on the previous versions!</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-theme="uncover" style="--theme:uncover;">
+<h3>Oracle will also backport to current Oracle JDK LTS version (OracleJDK 11)</h3>
+<p>but you'll need a <strong>&quot;Java SE Subscription&quot;</strong> to have the LTS updated binary<br />
+<em>(this is actually what LTS means)</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
+<h3>Who fix the older versions?</h3>
+<ul>
+<li data-marpit-fragment="1">The <strong>community</strong> + <strong>RedHat</strong> <em>should</em> backport fixes</li>
+<li data-marpit-fragment="2"><strong>How much time</strong> will be taken to fix a vulnerability once found (and published)? Nobody knows! We'll see...</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
+<h3>Vendors create binary builds</h3>
+<p>After RedHat+Community fix / patch the source repo, someone will have to <strong>build a new JDK binary distribution</strong> with that bug/vulnerabilities fixed.</p>
+<ul>
+<li data-marpit-fragment="1"><strong>AdoptOpenJDK</strong> =&gt; offers free builds of LTS JDK (via GPL)</li>
+<li data-marpit-fragment="2">other vendors (<strong>Oracle</strong>, <strong>RedHat</strong>, <strong>IBM</strong>, <strong>Azul</strong>, ...) =&gt; you have to <strong>pay</strong> for this!</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-theme="uncover" style="--theme:uncover;">
+<blockquote>
+<p><em>Let me assure you of one thing: whether by Oracle or Red Hat or someone else, JDK LTS releases will continue to be supported. We all have a lot invested in Java, and we won’t let it fall.</em></p>
+</blockquote>
+<blockquote>
+<p>— <a href="http://mail.openjdk.java.net/pipermail/jdk-dev/2018-August/001826.html">Andrew Haley, Red Hat</a></p>
+</blockquote>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
+<h3>Java9: Java Module System</h3>
+<ul>
+<li data-marpit-fragment="1">Java 8 was all about <strong>how we write code differently</strong>.</li>
+<li data-marpit-fragment="2">Java 9 is all about <strong>how we package and deploy our code</strong>. There are almost no code change.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
+<h3>Java9: Java Module System</h3>
+<ul>
+<li data-marpit-fragment="1">Java 8 changes <strong>how we think to and write code</strong>.</li>
+<li data-marpit-fragment="2">Java 9 changes <strong>how we package code</strong>.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
+<h3>Some breaking changes</h3>
+<ul>
+<li data-marpit-fragment="1">Upgrading from 8 to 9/10/11 <strong>is NOT simple</strong></li>
+<li data-marpit-fragment="2"><strong>Many runtime behavior changes</strong></li>
+<li data-marpit-fragment="3">Needs very <strong>thorough testing</strong></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-theme="uncover" style="--theme:uncover;">
+<h3>Loading resources</h3>
+<pre><code class="language-java">URL resource = sysCL.getResource(<span class="hljs-string">"/com/foo/bar.properties"</span>); 
+<span class="hljs-comment">// It’s there, but it won’t find it! </span>
+resource = <span class="hljs-keyword">null</span>;
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-theme="uncover" style="--theme:uncover;">
+<h3>What about Phoenix?</h3>
+<pre><code class="language-java">⋊&gt; ~/D/w/m/phoenix-project on master ⨯ rg -i <span class="hljs-string">"class.*getResource\("</span>                                 
+
+ispservicestub/src/com/xpeppers/ispservicestub/ISPServiceStubEnvironment.java
+<span class="hljs-number">21</span>:   <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.getClass().getClassLoader().getResource(configurationFilePath);
+
+alipaystub/src/com/xpeppers/alipaystub/AlipayStubEnvironment.java
+<span class="hljs-number">21</span>:   <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.getClass().getClassLoader().getResource(configurationFilePath);
+
+mybankstub/src/com/xpeppers/main/MyBankStubEnvironment.java
+<span class="hljs-number">19</span>:   <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.getClass().getClassLoader().getResource(configurationFilePath);
+
+phoenix/src/com/xpeppers/phoenix/main/BatchEnvironment.java
+<span class="hljs-number">38</span>:   <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.getClass().getClassLoader().getResource(configurationFilePath);
+
+stresstest/src/com/xpeppers/phoenix/stress/StressTest.java
+<span class="hljs-number">12</span>:   URL confFile = <span class="hljs-keyword">this</span>.getClass().getClassLoader().getResource(<span class="hljs-string">"stresstest.properties"</span>);
+
+simonidis/src/com/xpeppers/phoenix/fakeauthorizationws/SimonidisEnvironment.java
+<span class="hljs-number">17</span>:   <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.getClass().getClassLoader().getResource(configurationFilePath);
+
+minos/src/com/xpeppers/minos/domain/AcsVereqVerifier.java
+<span class="hljs-number">24</span>: <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> URL schemaPath = AcsVereqVerifier<span class="hljs-class">.<span class="hljs-keyword">class</span>.<span class="hljs-title">getResource</span>("/<span class="hljs-title">dtd</span>/<span class="hljs-title">acs_vereq_schema</span>.<span class="hljs-title">xsd</span>")</span>;
+
+minos/src/com/xpeppers/minos/domain/validators/PareqSyntaxValidator.java
+<span class="hljs-number">21</span>: <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> URL schemaPath = PareqSyntaxValidator<span class="hljs-class">.<span class="hljs-keyword">class</span>.<span class="hljs-title">getResource</span>("/<span class="hljs-title">dtd</span>/<span class="hljs-title">acs_pareq_schema</span>.<span class="hljs-title">xsd</span>")</span>;
+
+caffrey/src/com/xpeppers/phoenix/caffrey/cardgateway/CardEnrollmentMapper.java
+<span class="hljs-number">70</span>:     URL resource = <span class="hljs-keyword">this</span>.getClass().getClassLoader().getResource(configurationFilePath);
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-marpit-fragments="1" data-theme="uncover" style="--theme:uncover;">
+<p>### Internal APIs encapsulated!</p>
+<ul>
+<li data-marpit-fragment="1">Cannot access <code>sun.*</code> or <code>com.sun.*</code> classes anymore!</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-theme="uncover" style="--theme:uncover;">
+<h1>Who cares?</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-theme="uncover" style="--theme:uncover;">
+<h3>Phoenix!</h3>
+<p>Just one example:</p>
+<pre><code class="language-java">minos/src/com/xpeppers/minos/domain/SignXMLDOMforNewHSM.java
+<span class="hljs-number">3</span>:<span class="hljs-keyword">import</span> com.sun.org.apache.xml.internal.security.c14n.CanonicalizationException;
+<span class="hljs-number">4</span>:<span class="hljs-keyword">import</span> com.sun.org.apache.xml.internal.security.c14n.Canonicalizer;
+<span class="hljs-number">5</span>:<span class="hljs-keyword">import</span> com.sun.org.apache.xml.internal.security.c14n.InvalidCanonicalizerException;
+<span class="hljs-number">23</span>:<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> com.sun.org.apache.xml.internal.security.Init.init;
+<span class="hljs-number">24</span>:<span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> com.sun.org.apache.xml.internal.security.c14n.Canonicalizer.ALGO_ID_C14N_OMIT_COMMENTS;
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-theme="uncover" style="--theme:uncover;">
+<h3>Java Module System</h3>
+<h4>Visibility</h4>
+<p><strong><code>public</code></strong> is not the same anymore!</p>
+<p>A <strong><code>public</code></strong> class is available, but has to be exported by its containing module to be <strong>&quot;visible&quot;</strong>.</p>
+<p><strong><code>public</code></strong> + <strong><code>exports</code></strong> becomes visible outside the module!</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-marpit-fragments="4" data-theme="uncover" style="--theme:uncover;">
+<h3>Transitioning</h3>
+<p><strong>Old jars will be assumed to be modules in Java 9.</strong></p>
+<ul>
+<li data-marpit-fragment="1">Java 9 will assume that the name of the module is the name of the jar
+<ul>
+<li data-marpit-fragment="2">e.g. <code>junit</code> is the name of the module for the <code>junit-4.12.jar</code> jar</li>
+</ul>
+</li>
+<li data-marpit-fragment="3">It will also export everything in that jar.</li>
+<li data-marpit-fragment="4">It will require all you are using.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
+<h3>Unnamed Module</h3>
+<p>All stuff that is in the classpath (tipically jars) will be put into an &quot;unnamed&quot; module.</p>
+<ul>
+<li data-marpit-fragment="1">It <strong>reads</strong> every named modules.</li>
+<li data-marpit-fragment="2">It <strong>exposes</strong> every package.</li>
+<li data-marpit-fragment="3"><strong>Code in named modules cannot depend on code in the unnamed module</strong>.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-theme="uncover" style="--theme:uncover;">
+<h3>JShell</h3>
+<p><code>docker run --rm -it openjdk:11-slim /bin/jshell</code></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
+<h3>JLink</h3>
+<p>Create your own JRE images:</p>
+<ul>
+<li data-marpit-fragment="1">with the JDK modules your app needs</li>
+<li data-marpit-fragment="2">with all modules (JDK, app, deps)</li>
+</ul>
+<p><em>Smells like a &quot;Docker&quot; approach for the Java world.</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-theme="uncover" style="--theme:uncover;">
+<h3>Migrate to Java 11</h3>
+<h4>Start migrating to Java9</h4>
+<h4>Then move to Java 11</h4>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-marpit-fragments="3" data-theme="uncover" style="--theme:uncover;">
+<h1>How?</h1>
+<ul>
+<li data-marpit-fragment="1">First, <strong>update all your dependencies first</strong> (libraries, frameworks, etc)</li>
+<li data-marpit-fragment="2"><strong>Update your app server to latest version</strong> (is compatible with Java 9) - e.g. Tomcat, Jetty, etc</li>
+<li data-marpit-fragment="3"><em>BTW is your IDE ready?</em></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-theme="uncover" style="--theme:uncover;">
+<h2>What about Kotlin?</h2>
+<p><a href="https://discuss.kotlinlang.org/t/kotlin-support-for-java-9-and-java-10/8054/4">Kotlin support for Java 9 and Java 10</a></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-marpit-fragments="8" data-theme="uncover" style="--theme:uncover;">
+<h3>Resources</h3>
+<ul>
+<li data-marpit-fragment="1">
+<p>Java 9/10/11 - What's new and why you should upgrade</p>
+<ul>
+<li data-marpit-fragment="2"><a href="https://www.slideshare.net/SimoneBordet/java-91011-whats-new-and-why-you-should-upgrade">slides</a></li>
+<li data-marpit-fragment="3"><a href="https://www.youtube.com/watch?v=cUqcSFLnk_E&amp;list=PLRsbF2sD7JVq4IapQ-Fz6AuHMj2KITL6P&amp;index=17">video</a></li>
+</ul>
+</li>
+<li data-marpit-fragment="4">
+<p>Java Next! Release Cadence, Licensing, And LTS</p>
+<ul>
+<li data-marpit-fragment="5"><a href="https://slides.codefx.org/java-next/2018-09-30-codefx@yt/#/">slides</a></li>
+<li data-marpit-fragment="6"><a href="https://www.youtube.com/watch?v=7xkyV2kLb0c&amp;list=PL_-IO8LOLuNqMlbUSiThLaQda6ASUCrLm">video</a></li>
+</ul>
+</li>
+<li data-marpit-fragment="7">
+<p><a href="https://docs.google.com/document/d/1nFGazvrCvHMZJgFstlbzoHjpAVwv5DEdnaBr_5pKuHo/edit#heading=h.p3qt2oh5eczi">Java is Still Free!</a></p>
+</li>
+<li data-marpit-fragment="8">
+<p><a href="https://medium.com/codefx-weekly/no-free-java-lts-version-b850192745fb">No Free Java LTS Version?<br />
+</a></p>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
+<h3>Migration guides</h3>
+<ul>
+<li data-marpit-fragment="1"><a href="https://blog.codefx.org/java/java-9-migration-guide/">Java 9 Migration Guide</a></li>
+<li data-marpit-fragment="2"><a href="https://blog.codefx.org/java/java-11-migration-guide/">All You Need To Know For Migrating To Java 11</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-marpit-fragments="2" data-theme="uncover" style="--theme:uncover;">
+<h3>On Java 9 Module System</h3>
+<ul>
+<li data-marpit-fragment="1"><a href="https://www.youtube.com/watch?v=8XmYT89fBKg">Exploring Java 9 by Venkat Subramaniam<br />
+</a></li>
+<li data-marpit-fragment="2"><a href="https://www.youtube.com/watch?v=gtcTftvj0d0">Modular Development with JDK 9<br />
+</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-theme="uncover" style="--theme:uncover;">
+<p><a href="https://www.jetbrains.com/research/devecosystem-2018/java/">The State of Developer Ecosystem Survey in 2018<br />
+</a></p>
+<p><img src="./assets/The_State_of_Developer_Ecosystem_Survey_in_2018.png" alt="The State of Developer Ecosystem Survey in 2018" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-theme="uncover" style="--theme:uncover;">
+<p><a href="https://twitter.com/winterbe_/status/1035864662976413696">A twitter survey<br />
+</a></p>
+<p><img src="./assets/twitter.survey.png" alt="A twitter survey" /></p>
+</section>
+<script>!function(){"use strict";function t(t){Array.from(document.getElementsByTagName("svg"),e=>{if(e.hasAttribute("data-marpit-svg")){const{clientHeight:r,clientWidth:a}=e;e.style.transform||(e.style.transform="translateZ(0)");const o=t||e.currentScale||1,i=e.viewBox.baseVal.width/o,n=e.viewBox.baseVal.height/o,s=Math.min(r/n,a/i);Array.from(e.querySelectorAll(":scope > foreignObject"),t=>{const e=t.x.baseVal.value,o=t.y.baseVal.value;Array.from(t.querySelectorAll(":scope > section"),t=>{t.style.transformOrigin||(t.style.transformOrigin="0 0");const l=(a-s*i)/2-e,c=(r-s*n)/2-o;t.style.transform=`translate3d(${l}px,${c}px,0) scale(${s}) translate(${e}px,${o}px)`})})}})}const e=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function r(a=!0){for(const e of"Apple Computer, Inc."===navigator.vendor?[t]:[])e();Array.from(document.querySelectorAll('svg[data-marp-fitting="svg"]'),t=>{const r=t.firstChild,a=r.firstChild,{scrollWidth:o,scrollHeight:i}=a;let n,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(n=t.parentElement.parentElement),t.hasAttribute("data-marp-fitting-math")&&(n=t.parentElement),n){const t=getComputedStyle(n),e=Math.ceil(n.clientWidth-parseFloat(t.paddingLeft)-parseFloat(t.paddingRight));e&&(s=e)}const l=Math.max(o,s),c=Math.max(i,1),p=`0 0 ${l} ${c}`;e(r,"width",`${l}`),e(r,"height",`${c}`),e(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),e(t,"viewBox",p)&&t.classList.toggle("__reflow__")}),a&&window.requestAnimationFrame(()=>r(a))}!function(){if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");window.marpCoreBrowserScript?console.warn("Marp Core's browser script has already executed."):(Object.defineProperty(window,"marpCoreBrowserScript",{value:!0}),r())}()}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="20" tabindex="0"><p>.slide: style=&quot;text-align: left;&quot;</p></div><script>!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),o={},a=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},i=function(e,t){o[e]=(o[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(o[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",a(n,t)),n=s[e],l("activate",a(n,t)))},d=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",a(n,t))&&c(r,t)},u={off:i,on:function(e,t){return(o[e]||(o[e]=[])).push(t),i.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",a(s[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",a(n,e)),o={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.map(e=>e.classList.add("bespoke-marp-slide")),e.on("activate",t=>{e.slides.map(e=>e.classList.remove("bespoke-marp-active")),t.slide.classList.add("bespoke-marp-active")})}function n(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout(()=>{t.parent.classList.add("bespoke-marp-inactive")},e),t.parent.classList.remove("bespoke-marp-inactive")}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}const r=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"];function s(e){e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(r.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})}function o(e){window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}})}function a(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const o=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",o?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")})}),e.fragmentIndex=s;const o={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",o)};e.on("next",()=>{if(r(1))return s(t,n+1),!1;const o=t+1;e.fragments[o]&&s(o,0)}),e.on("prev",()=>{if(r(-1))return s(t,n-1),!1;const o=t-1;e.fragments[o]&&s(o,e.fragments[o].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)}),s(0,0)}var i,l=function(e,t){return e(t={exports:{}},t.exports),t.exports}((function(e){
+/*!
+  * screenfull
+  * v5.0.2 - 2020-02-13
+  * (c) Sindre Sorhus; MIT License
+  */
+!function(){var t="undefined"!=typeof window&&void 0!==window.document?window.document:{},n=e.exports,r=function(){for(var e,n=[["requestFullscreen","exitFullscreen","fullscreenElement","fullscreenEnabled","fullscreenchange","fullscreenerror"],["webkitRequestFullscreen","webkitExitFullscreen","webkitFullscreenElement","webkitFullscreenEnabled","webkitfullscreenchange","webkitfullscreenerror"],["webkitRequestFullScreen","webkitCancelFullScreen","webkitCurrentFullScreenElement","webkitCancelFullScreen","webkitfullscreenchange","webkitfullscreenerror"],["mozRequestFullScreen","mozCancelFullScreen","mozFullScreenElement","mozFullScreenEnabled","mozfullscreenchange","mozfullscreenerror"],["msRequestFullscreen","msExitFullscreen","msFullscreenElement","msFullscreenEnabled","MSFullscreenChange","MSFullscreenError"]],r=0,s=n.length,o={};r<s;r++)if((e=n[r])&&e[1]in t){for(r=0;r<e.length;r++)o[n[0][r]]=e[r];return o}return!1}(),s={change:r.fullscreenchange,error:r.fullscreenerror},o={request:function(e){return new Promise(function(n,s){var o=function(){this.off("change",o),n()}.bind(this);this.on("change",o);var a=(e=e||t.documentElement)[r.requestFullscreen]();a instanceof Promise&&a.then(o).catch(s)}.bind(this))},exit:function(){return new Promise(function(e,n){if(this.isFullscreen){var s=function(){this.off("change",s),e()}.bind(this);this.on("change",s);var o=t[r.exitFullscreen]();o instanceof Promise&&o.then(s).catch(n)}else e()}.bind(this))},toggle:function(e){return this.isFullscreen?this.exit():this.request(e)},onchange:function(e){this.on("change",e)},onerror:function(e){this.on("error",e)},on:function(e,n){var r=s[e];r&&t.addEventListener(r,n,!1)},off:function(e,n){var r=s[e];r&&t.removeEventListener(r,n,!1)},raw:r};r?(Object.defineProperties(o,{isFullscreen:{get:function(){return Boolean(t[r.fullscreenElement])}},element:{enumerable:!0,get:function(){return t[r.fullscreenElement]}},isEnabled:{enumerable:!0,get:function(){return Boolean(t[r.fullscreenEnabled])}}}),n?e.exports=o:window.screenfull=o):n?e.exports={isEnabled:!1}:window.screenfull={isEnabled:!1}}()}));l.isEnabled;function c(e){e.fullscreen=()=>{l.isEnabled&&l.toggle(document.body)},document.addEventListener("keydown",t=>{70!==t.which&&122!==t.which||t.altKey||t.ctrlKey||t.metaKey||!l.isEnabled||(e.fullscreen(),t.preventDefault())})}function d(e={}){const t=Object.assign({interval:200},e);return e=>{document.addEventListener("keydown",t=>{(32===t.which&&t.shiftKey||33===t.which||37===t.which||38===t.which)&&e.prev(),(32===t.which&&!t.shiftKey||34===t.which||39===t.which||40===t.which)&&e.next(),35===t.which&&e.slide(e.slides.length-1,{fragment:-1}),36===t.which&&e.slide(0)});let n,r,s=0;e.parent.addEventListener("wheel",o=>{let a=!1;const l=(e,t)=>{e&&(a=a||function(e,t){return function(e,t){const n=t===i.X?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]}(e,t)&&function(e,t){const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r}(getComputedStyle(e),t)}(e,t)),(null==e?void 0:e.parentElement)&&l(e.parentElement,t)};if(0!==o.deltaX&&l(o.target,i.X),0!==o.deltaY&&l(o.target,i.Y),a)return;o.preventDefault(),r&&clearTimeout(r),r=setTimeout(()=>{n=0},t.interval);const c=Date.now()-s<t.interval,d=Math.sqrt(Math.pow(o.deltaX,2)+Math.pow(o.deltaY,2)),u=d<=n;if(n=d,c||u)return;let f;(o.deltaX>0||o.deltaY>0)&&(f="next"),(o.deltaX<0||o.deltaY<0)&&(f="prev"),f&&(e[f](),s=Date.now())})}}!function(e){e.X="X",e.Y="Y"}(i||(i={}));const u=(...e)=>history.replaceState(...e);var f;!function(e){e.Normal="",e.Presenter="presenter",e.Next="next"}(f||(f={}));const p=(e,{protocol:t,host:n,pathname:r,hash:s}=location)=>{const o=e.toString();return`${t}//${n}${r}${o?"?":""}${o}${s}`},m=()=>{switch(document.body.getAttribute("data-bespoke-view")){case f.Normal:return f.Normal;case f.Presenter:return f.Presenter;case f.Next:return f.Next;default:throw new Error("View mode is not assigned.")}},h=e=>new URLSearchParams(location.search).get(e),g=(e,t={})=>{const n=Object.assign({location:location,setter:u},t),r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter(null,document.title,p(r,n.location))}catch(e){console.error(e)}},b={available:(()=>{try{return localStorage.setItem("bespoke-marp","bespoke-marp"),localStorage.removeItem("bespoke-marp"),!0}catch(e){return console.warn("Warning: Using localStorage is restricted in the current host so some features may not work."),!1}})(),get:e=>{try{return localStorage.getItem(e)}catch(e){return null}},set:(e,t)=>{try{return localStorage.setItem(e,t),!0}catch(e){return!1}},remove:e=>{try{return localStorage.removeItem(e),!0}catch(e){return!1}}};function v(e=".bespoke-marp-osc"){const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[data-bespoke-marp-osc=${JSON.stringify(e)}]`).forEach(n)};return l.isEnabled||n("fullscreen",e=>e.style.display="none"),b.available||n("presenter",e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."}),e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;switch(n&&t.target.blur(),n){case"next":e.next();break;case"prev":e.prev();break;case"fullscreen":"function"==typeof e.fullscreen&&l.isEnabled&&e.fullscreen();break;case"presenter":e.openPresenterView()}}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:s})=>{n("prev",e=>e.disabled=0===t&&0===s),n("next",n=>n.disabled=t===e.slides.length-1&&s===r.length-1)}),l.isEnabled&&l.onchange(()=>n("fullscreen",e=>e.classList.toggle("exit",l.isEnabled&&l.isFullscreen)))}}function w(){const e=Math.max(Math.floor(.85*window.innerWidth),640),t=Math.max(Math.floor(.85*window.innerHeight),360);return window.open(this.presenterUrl,`bespoke-marp-presenter-${this.syncKey}`,`width=${e},height=${t},menubar=no,toolbar=no`)}function y(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),p(e)}var x=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"];let E=e=>String(e).replace(/[&<>"']/g,e=>`&${k[e]};`),k={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},S="dangerouslySetInnerHTML",L={className:"class",htmlFor:"for"},I={};function P(e,t){let n=[],r="";t=t||{};for(let e=arguments.length;e-- >2;)n.push(arguments[e]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(let e in t)!1!==t[e]&&null!=t[e]&&e!==S&&(r+=` ${L[e]?L[e]:E(e)}="${E(t[e])}"`);r+=">"}if(-1===x.indexOf(e)){if(t[S])r+=t[S].__html;else for(;n.length;){let e=n.pop();if(e)if(e.pop)for(let t=e.length;t--;)n.push(e[t]);else r+=!0===I[e]?e:E(e)}r+=e?`</${e}>`:""}return I[r]=!0,r}const M=({children:e})=>P(null,null,...e),N="bespoke-marp-presenter-container",$="bespoke-marp-presenter-next",F="bespoke-marp-presenter-next-container",O="bespoke-marp-presenter-note-container",T="bespoke-marp-presenter-info-container",q="bespoke-marp-presenter-info-page",C="bespoke-marp-presenter-info-page-text",j="bespoke-marp-presenter-info-page-prev",A="bespoke-marp-presenter-info-page-next",K="bespoke-marp-presenter-info-time",R="bespoke-marp-presenter-info-timer";function U(e){const{title:t}=document;document.title=`[Presenter view]${t?` - ${t}`:""}`;const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=N,t.appendChild(e),t.insertAdjacentHTML("beforeend",P(M,null,P("div",{class:F},P("iframe",{class:$,src:"?view=next"})),P("div",{class:O}),P("div",{class:T},P("div",{class:q},P("button",{class:j,tabindex:"-1",title:"Previous"},"Previous"),P("span",{class:C}),P("button",{class:A,tabindex:"-1",title:"Next"},"Next")),P("time",{class:K,title:"Current time"}),P("div",{class:R})))),t})(e.parent)),(e=>{r(F).addEventListener("click",()=>e.next());const t=r($),n=(s=t,(e,t)=>s.contentWindow.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var s;t.addEventListener("load",()=>{r(F).classList.add("active"),n(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>n(e,t))});const o=document.querySelectorAll(".bespoke-marp-note");o.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(O).appendChild(e)}),e.on("activate",()=>o.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide()))),e.on("activate",({index:t})=>{r(C).textContent=`${t+1} / ${e.slides.length}`});const a=r(j),i=r(A);a.addEventListener("click",()=>{a.blur(),e.prev()}),i.addEventListener("click",()=>{i.blur(),e.next()}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{a.disabled=0===t&&0===r,i.disabled=t===e.slides.length-1&&r===n.length-1});const l=()=>r(K).textContent=(new Date).toLocaleTimeString();l(),setInterval(l,250)})(e)}function V(e){const t=m();return t===f.Next&&e.appendChild(document.createElement("span")),e=>{t===f.Normal&&function(e){if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:w},presenterUrl:{enumerable:!0,get:y}}),b.available&&document.addEventListener("keydown",t=>{80!==t.which||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})}(e),t===f.Presenter&&U(e),t===f.Next&&function(e){const t=t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");e.slide(Number.parseInt(t,10),{fragment:Number.parseInt(n,10)}),e.next()}};window.addEventListener("message",t),e.on("destroy",()=>window.removeEventListener("message",t))}(e)}}function X(e){e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-bar").forEach(n=>{n.style.flexBasis=`${100*t.index/(e.slides.length-1)}%`})})}const D=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t};function Y(e={}){const t=Object.assign({history:!0},e);return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},s=(t={fragment:!0})=>{((t,n)=>{const{fragments:r,slides:s}=e,o=Math.max(0,Math.min(t,s.length-1)),a=Math.max(0,Math.min(n||0,r[o].length-1));o===e.slide()&&a===e.fragmentIndex||e.slide(o,{fragment:a})})((D(location.hash.slice(1))||1)-1,t.fragment?D(h("f")||""):null)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||g({f:0===r||r.toString()},{location:Object.assign(Object.assign({},location),{hash:`#${e+1}`}),setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{s(),window.addEventListener("hashchange",()=>r(()=>{s({fragment:!1}),g({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>s())}),n=!1},0)}}for(var B=self.crypto||self.msCrypto,z="-_",H=36;H--;)z+=H.toString(36);for(H=36;H---10;)z+=H.toString(36).toUpperCase();function J(e={}){const t=e.key||function(e){var t="",n=B.getRandomValues(new Uint8Array(e||21));for(H=e||21;H--;)t+=z[63&n[H]];return t}(),n=`bespoke-marp-sync-${t}`,r=()=>{const e=b.get(n);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=r(),s=Object.assign(Object.assign({},t),e(t));return b.set(n,JSON.stringify(s)),s};return s(e=>({reference:(e.reference||0)+1})),e=>{Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let o=!0;setTimeout(()=>{e.on("fragment",e=>{o&&s(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),r=JSON.parse(t.newValue);if(n.index!==r.index||n.fragmentIndex!==r.fragmentIndex)try{o=!1,e.slide(r.index,{fragment:r.fragmentIndex})}finally{o=!0}}}),e.on("destroy",()=>{const{reference:e}=r();void 0===e||e<=1?b.remove(n):s(()=>({reference:e-1}))})}}function W(e={}){const t=Object.assign({slope:Math.tan(-35*Math.PI/180),swipeThreshold:30},e);return e=>{let n;const r=e.parent,s=e=>{const t=r.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};r.addEventListener("touchstart",e=>{n=1===e.touches.length?s(e.touches[0]):void 0},{passive:!0}),r.addEventListener("touchmove",e=>{if(n)if(1===e.touches.length){e.preventDefault();const t=s(e.touches[0]),r=t.x-n.x,o=t.y-n.y;n.delta=Math.sqrt(Math.pow(Math.abs(r),2)+Math.pow(Math.abs(o),2)),n.radian=Math.atan2(r,o)}else n=void 0}),r.addEventListener("touchend",r=>{if(n){if(n.delta&&n.delta>=t.swipeThreshold){let s=n.radian-t.slope;s=(s+Math.PI)%(2*Math.PI)-Math.PI,e[s<0?"next":"prev"](),r.stopPropagation()}n=void 0}},{passive:!0})}}const _=[f.Normal,f.Presenter,f.Next];!function(r=document.getElementById("p")){document.body.setAttribute("data-bespoke-view",(()=>{switch(h("view")){case"next":return f.Next;case"presenter":return f.Presenter;default:return f.Normal}})());const i=(e=>{const t=h(e);return g({[e]:void 0}),t})("sync")||void 0,l=!1,u=!0,p=e(r,((...e)=>{const t=_.findIndex(e=>m()===e);if(t<0)throw new Error("Invalid view");return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[u,u,l],J({key:i})],[[u,u,u],V(r)],[[u,u,l],s],[[u,u,u],t],[[u,l,l],n()],[[u,u,u],o],[[u,u,u],Y({history:!1})],[[u,u,l],d()],[[u,u,l],c],[[u,l,l],X],[[u,u,l],W()],[[u,l,l],v()],[[u,u,u],a]));window.addEventListener("beforeunload",()=>g({sync:p.syncKey})),window.addEventListener("unload",()=>p.destroy())}()}();
+</script></body></html>
